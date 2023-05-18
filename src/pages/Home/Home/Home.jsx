@@ -1,9 +1,11 @@
-import bg from '../../../assets/bg.jpg'
+import Banner from '../Banner/Banner';
+import Gallery from '../Gallery/Gallery';
 const Home = () => {
     return (
-        <div  className="bg-cover bg-center h-screen pt-44" style={{ backgroundImage: `url('${bg}')` }}>
-            <h2>This is Home</h2>
-        </div>
+        <div className="pt-42">
+                <Banner></Banner>
+                <Gallery></Gallery>
+            </div>
     );
 };
 

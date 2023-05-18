@@ -44,7 +44,7 @@ const Navbar = () => {
                 {
                     user && <>
                         <Link className='font-bold italic text-pink-500 text-xs md:text-lg p-1 md:px-2 rounded-lg hover:bg-yellow-300 bg-yellow-200 ' to='/mytoys'>My Toys</Link>
-                        <Link className='font-bold italic text-pink-500 text-xs md:text-lg p-1 md:px-2 rounded-lg hover:bg-yellow-300 bg-yellow-200 ' to='/addtoy'>Add A Toy</Link>
+                        <Link className='font-bold italic text-pink-500 text-xs md:text-lg p-1 md:px-2 rounded-lg hover:bg-yellow-300 bg-yellow-200 ' to='/addtoys'>Add A Toy</Link>
                     </>
                 }
                 <Link className='font-bold italic text-pink-500 text-xs md:text-lg p-1 md:px-2 rounded-lg hover:bg-yellow-300 bg-yellow-200 ' to='/blogs'>Blogs</Link>
