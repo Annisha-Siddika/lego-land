@@ -1,7 +1,8 @@
 import logo from '../../assets/lego-man.png'
+import bg from '../../assets/bg2.jpg'
 const Login = () => {
     return (
-        <div className="hero min-h-screen pt-44 pb-20">
+        <div className="hero min-h-screen pt-44 pb-20"  style={{ backgroundImage: `url('${bg}')` }}>
             <div className="hero-content flex-col lg:flex-row md:gap-28">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold text-pink-500">Login now!</h1>
