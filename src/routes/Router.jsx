@@ -7,11 +7,13 @@ import MyToys from "../pages/MyToys/MyToys";
 import AddToys from "../pages/AddToys/AddToys";
 import PrivateRoute from "./PrivateRoute";
 import Blog from "../pages/Blog/Blog";
+import Error404 from "../Error404";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <Error404></Error404>,
       children: [
         {
             path: '/',
