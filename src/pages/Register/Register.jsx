@@ -1,4 +1,4 @@
-import logo from '../../assets/lego-man2.png'
+
 import bg from '../../assets/bg2.jpg'
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
@@ -40,7 +40,7 @@ const Register = () => {
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold text-pink-500">Please Register</h1>
                     <div className='w-44 mx-auto'>
-                    <img className='w-44 my-8' src={logo} alt="" />
+                    <img className='w-44 my-8' src='https://i.ibb.co/RBCVPKP/lego-man.png' alt="" />
                     </div>
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

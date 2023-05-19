@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
-import gif from './assets/error.gif'
 const Error404 = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <img
-        src={gif}
+        src='https://i.ibb.co/cy1qVbq/error.gif'
         alt="Error 404"
         className="w-96"
       />
