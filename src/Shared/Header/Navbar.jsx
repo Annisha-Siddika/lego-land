@@ -32,7 +32,7 @@ const Navbar = () => {
                             <Link to='/login'>
                                 <button className='bg-pink-500 px-2 py-1 rounded-lg border-2 font-bold italic text-yellow-200 hover:bg-pink-600 border-purple-700'>Log In</button></Link>
                             <Link to='/register'>
-                                <button className='bg-pink-500 px-2 py-1 rounded-lg border-2 font-bold italic text-yellow-200 hover:bg-pink-600 border-purple-700'>Register</button>
+                                <button className='bg-pink-500 px-2 py-1 rounded-lg border-2 font-bold italic text-yellow-200 hover:bg-pink-600 border-purple-700 '>Register</button>
                             </Link>
                         </div>
                     </>
