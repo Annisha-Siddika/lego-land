@@ -42,7 +42,8 @@ const router = createBrowserRouter([
         },
         {
             path: '/toy/:id',
-            element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>
+            element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
+            loader: ({params}) => fetch(`http://localhost:5000/categories/${params.id}`)
         },
         {
             path: '/blog',
