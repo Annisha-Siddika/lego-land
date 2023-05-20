@@ -61,7 +61,7 @@ const Login = () => {
                             </label>
                             <input type="email"
                             name='email' 
-                            placeholder="Your Email" className="input input-bordered" />
+                            placeholder="Your Email" className="input input-bordered" required/>
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -69,7 +69,7 @@ const Login = () => {
                             </label>
                             <input type="password"
                             name='password'
-                             placeholder="Your Password" className="input input-bordered" />
+                             placeholder="Your Password" className="input input-bordered" required />
                         </div>
                         <div className='text-center bg-pink-500 px-2 py-1 rounded-lg border-2 font-bold italic text-yellow-200 hover:bg-pink-600 border-purple-700 mt-6'><input type="submit" value='Login' /></div>
                         <div className="divider">OR</div>
