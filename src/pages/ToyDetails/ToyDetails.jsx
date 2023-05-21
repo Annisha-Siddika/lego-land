@@ -5,7 +5,7 @@ import { Rating } from "@smastrom/react-rating";
 
 const ToyDetails = () => {
     const {photo_url, name, price, ratings, quantity, details} = useLoaderData();
-    // picture, toy name, seller name, seller email, price, rating, available quantity, and detail description
+    
     const {user} = useContext(AuthContext);
     return (
         <div className="pt-40">
