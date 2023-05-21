@@ -28,7 +28,7 @@ const MyToys = () => {
     
       const fetchToys = async () => {
         try {
-          const response = await fetch(`https://assignment-11-server-five-sable.vercel.app/mytoys?sort=${sortOrder}`);
+          const response = await fetch(`/mytoys/${user.email}?sort=${sortOrder}`);
           const data = await response.json();
           setToys(data);
         } catch (error) {
@@ -66,10 +66,14 @@ const MyToys = () => {
                             <td className="px-4 py-2 w-28">
                                 <img src={toy.pictureUrl} alt="" /></td>
                             <td className="px-4 py-2">{toy.sellerName}</td>
-                            <td className="px-4 py-2">{toy.name}</td>
-                            <td className="px-4 py-2">{toy.subCategory}</td>
                             <td className="px-4 py-2">{toy.price}</td>
-                            <td className="px-4 py-2">{toy.quantity}</td>
+                            <td className="px-4 py-2">{toy.name}</td>
+                            <td className="px-4 py-2">
+                            <button className="btn bg-pink-500 text-yellow-200 my-4 border-2 border-purple-800">Update</button>
+                            </td>
+                            <td className="px-4 py-2">
+                            <button className="btn bg-pink-500 text-yellow-200 my-4 border-2 border-purple-800">Delete</button>
+                            </td>
                             <td className="px-4 py-2">
                             
                     <Link to={`/singletoy/${toy._id}`} className="btn bg-pink-500 text-yellow-200 my-4 border-2 border-purple-800" onClick={showAlert}>View Details</Link>
