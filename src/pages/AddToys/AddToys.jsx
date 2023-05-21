@@ -9,7 +9,7 @@ const AddToys = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = data => {
 
-    fetch('http://localhost:5000/addtoys', {
+    fetch('https://assignment-11-server-five-sable.vercel.app/addtoys', {
       method: "POST",
       headers: {
         'content-type': 'application/json'
@@ -21,7 +21,7 @@ const AddToys = () => {
         console.log(data);
         if (data.insertedId) {
           Swal.fire({
-            position: 'top-end',
+            position: 'top-center',
             icon: 'success',
             title: 'Your Toy has been added successfully',
             showConfirmButton: false,

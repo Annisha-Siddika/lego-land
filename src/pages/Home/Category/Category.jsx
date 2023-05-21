@@ -12,7 +12,7 @@ const Category = () => {
       }, []);
 
       const fetchCategoryData = (category) => {
-        fetch(`http://localhost:5000/categories?category=${encodeURIComponent(category)}`)
+        fetch(`https://assignment-11-server-five-sable.vercel.app/categories?category=${encodeURIComponent(category)}`)
           .then(res => res.json())
           .then(data => setCategories(data))
           .catch(error => {
