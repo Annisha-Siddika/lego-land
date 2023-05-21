@@ -1,9 +1,21 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const AllToys = () => {
   const [toys, setToys] = useState([]);
   const [sortOrder, setSortOrder] = useState('');
   const [searchTerm, setSearchTerm] = useState("");
+  const { user } = useContext(AuthContext);
+
+    const showAlert =() =>{
+        Swal.fire({
+            title: 'You have to log in first to view details',
+            icon: 'warning',
+            confirmButtonText: 'OK'
+          });
+    }
   useEffect(() => {
     fetchToys();
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -75,9 +87,12 @@ const AllToys = () => {
                             <td className="px-4 py-2">{toy.price}</td>
                             <td className="px-4 py-2">{toy.quantity}</td>
                             <td className="px-4 py-2">
-                                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                    View Details
-                                </button>
+                            {user ? (
+                    <Link to={`/singletoy/${toy._id}`} className="btn bg-pink-500 text-yellow-200 my-4 border-2 border-purple-800">View Details</Link>
+                ) : ( 
+                    <Link to={`/singletoy/${toy._id}`} className="btn bg-pink-500 text-yellow-200 my-4 border-2 border-purple-800" onClick={showAlert}>View Details</Link>
+                    
+                )}
                             </td>
                         </tr>
                     ))}

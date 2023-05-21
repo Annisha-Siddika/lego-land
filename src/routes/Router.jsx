@@ -10,6 +10,7 @@ import Blog from "../pages/Blog/Blog";
 import Error404 from "../Error404";
 import ToyDetails from "../pages/ToyDetails/ToyDetails";
 import AllToys from "../pages/AllToys/AllToys";
+import SingleToy from "../pages/SingleToy/SingleToy";
 
 const router = createBrowserRouter([
     {
@@ -49,6 +50,12 @@ const router = createBrowserRouter([
         {
             path: '/alltoys',
             element: <AllToys></AllToys>
+        },
+        {
+            path: '/singletoy/:id',
+            element: <PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
+            loader: ({params}) => fetch(`https://assignment-11-server-five-sable.vercel.app/alltoys/${params.id}`)
+
         },
         {
             path: '/blog',
